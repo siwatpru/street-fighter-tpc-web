@@ -172,14 +172,14 @@ class TPC extends Component {
             <div className="fighting-centered fighting-block">
               <img
                 src={
-                  this.state.room[this.state.roomID].player1.charge >= 3
-                    ? player1Charge
-                    : this.state.room[this.state.roomID].player1
-                        .lastAction === ACTION.DEFEND
-                      ? player1Shield
-                      : this.state.room[this.state.roomID].player1
-                          .lastAction === ACTION.ATTACK
-                        ? player1Attack
+                  this.state.room[this.state.roomID].player1.lastAction
+                      === ACTION.DEFEND
+                    ? player1Shield
+                    : this.state.room[this.state.roomID].player1.lastAction
+                        === ACTION.ATTACK
+                      ? player1Attack
+                      : this.state.room[this.state.roomID].player1.charge >= 3
+                        ? player1Charge
                         : player1
                 }
                 className="fighting-player TPC-logo"
@@ -207,14 +207,14 @@ class TPC extends Component {
             <div className="fighting-centered fighting-block">
               <img
                 src={
-                  this.state.room[this.state.roomID].player2.charge >= 3
-                    ? player2Charge
-                    : this.state.room[this.state.roomID].player2
-                        .lastAction === ACTION.DEFEND
-                      ? player2Shield
-                      : this.state.room[this.state.roomID].player2
-                          .lastAction === ACTION.ATTACK
-                        ? player2Attack
+                  this.state.room[this.state.roomID].player2.lastAction
+                      === ACTION.DEFEND
+                    ? player2Shield
+                    : this.state.room[this.state.roomID].player2.lastAction
+                        === ACTION.ATTACK
+                      ? player2Attack
+                      : this.state.room[this.state.roomID].player2.charge >= 3
+                        ? player2Charge
                         : player2
                 }
                 className="fighting-player TPC-logo"
