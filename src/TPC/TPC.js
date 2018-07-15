@@ -5,9 +5,12 @@ import socketIOClient from "socket.io-client";
 import player1 from "../accets/tpc_player_v1/tpc_sprite_player_A.gif";
 import player1Charge from "../accets/tpc_player_v1/tpc_sprite_player_A_charge.gif";
 import player1Attack from "../accets/tpc_player_v1/tpc_sprite_player_A_attack.gif";
+import player1Shield from "../accets/tpc_player_v1/tpc_sprite_player_A_shield.gif";
 import player2 from "../accets/tpc_player_v1/tpc_sprite_player_B.gif";
 import player2Charge from "../accets/tpc_player_v1/tpc_sprite_player_B_charge.gif";
 import player2Attack from "../accets/tpc_player_v1/tpc_sprite_player_B_attack.gif";
+import player2Shield from "../accets/tpc_player_v1/tpc_sprite_player_B_shield.gif";
+
 import shield from "../accets/tpc_player_v1/tpc_sprite_shield.png";
 
 const ACTION = {
@@ -171,10 +174,13 @@ class TPC extends Component {
                 src={
                   this.state.room[this.state.roomID].player1.charge >= 3
                     ? player1Charge
-                    : this.state.room[this.state.roomID].player1.lastAction ===
-                      ACTION.ATTACK
-                      ? player1Attack
-                      : player1
+                    : this.state.room[this.state.roomID].player1
+                        .lastAction === ACTION.DEFEND
+                      ? player1Shield
+                      : this.state.room[this.state.roomID].player1
+                          .lastAction === ACTION.ATTACK
+                        ? player1Attack
+                        : player1
                 }
                 className="fighting-player TPC-logo"
                 alt="Player 1 character"
@@ -203,10 +209,13 @@ class TPC extends Component {
                 src={
                   this.state.room[this.state.roomID].player2.charge >= 3
                     ? player2Charge
-                    : this.state.room[this.state.roomID].player2.lastAction ===
-                      ACTION.ATTACK
-                      ? player2Attack
-                      : player2
+                    : this.state.room[this.state.roomID].player2
+                        .lastAction === ACTION.DEFEND
+                      ? player2Shield
+                      : this.state.room[this.state.roomID].player2
+                          .lastAction === ACTION.ATTACK
+                        ? player2Attack
+                        : player2
                 }
                 className="fighting-player TPC-logo"
                 alt="Player 2 character"
