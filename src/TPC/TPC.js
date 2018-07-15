@@ -3,7 +3,11 @@ import "./TPC.css";
 import socketIOClient from "socket.io-client";
 
 import player1 from "../accets/tpc_player_v1/tpc_sprite_player_A.png";
+import player1Charge from "../accets/tpc_player_v1/tpc_sprite_player_A_charge.gif";
+import player1Attack from "../accets/tpc_player_v1/tpc_sprite_player_A_attack.gif";
 import player2 from "../accets/tpc_player_v1/tpc_sprite_player_B.png";
+import player2Charge from "../accets/tpc_player_v1/tpc_sprite_player_B_charge.gif";
+import player2Attack from "../accets/tpc_player_v1/tpc_sprite_player_B_attack.gif";
 import shield from "../accets/tpc_player_v1/tpc_sprite_shield.png";
 
 const ACTION = {
@@ -164,7 +168,14 @@ class TPC extends Component {
             </div>
             <div className="fighting-centered fighting-block">
               <img
-                src={player1}
+                src={
+                  this.state.room[this.state.roomID].player1.charge >= 3
+                    ? player1Charge
+                    : this.state.room[this.state.roomID].player1.lastAction ===
+                      ACTION.ATTACK
+                      ? player1Attack
+                      : player1
+                }
                 className="fighting-player TPC-logo"
                 alt="Player 1 character"
                 onClick={() => this.changePage(4)}
@@ -189,7 +200,14 @@ class TPC extends Component {
             </div>
             <div className="fighting-centered fighting-block">
               <img
-                src={player2}
+                src={
+                  this.state.room[this.state.roomID].player2.charge >= 3
+                    ? player2Charge
+                    : this.state.room[this.state.roomID].player2.lastAction ===
+                      ACTION.ATTACK
+                      ? player2Attack
+                      : player2
+                }
                 className="fighting-player TPC-logo"
                 alt="Player 2 character"
               />
