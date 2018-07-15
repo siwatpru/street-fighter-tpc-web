@@ -1,0 +1,179 @@
+.TPC {
+  text-align: center;
+}
+
+body {
+  background-color: #333;
+  height: 100%;
+}
+
+.TPC-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.TPC-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.TPC-title {
+  font-size: 1.5em;
+}
+
+.TPC-intro {
+  font-size: large;
+}
+
+.center {
+  text-align: center;
+}
+
+.Lobby-qr {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.Lobby-player-blog {
+  padding: 20px;
+  margin: 20px;
+  color: #333;
+  display: inline-block;
+  font-family: monospace;
+  font-size: 32px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.fighting-split {
+  height: 100%;
+  width: 50%;
+  z-index:1;
+  top: 0;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.fighting-left {
+  left: 0;
+  background-color: rgb(65, 65, 65);
+}
+
+.fighting-right {
+  right: 0;
+  background-color: rgb(65, 65, 65);
+} 
+
+.fighting-player {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  margin: 10px;
+  image-rendering: pixelated;
+}
+
+.fighting-player-small {
+  width: 25%;
+  height: 25%;
+  padding: 10px;
+  margin: 10px;
+  image-rendering: pixelated;
+}
+
+.fighting-action-board {
+  width: 100% !important;
+  margin: 0px auto;
+  transform: translate(-50%, 0%) !important;
+}
+
+.fighting-action-board p {
+  padding: 20px;
+  margin: 20px;
+  width: 200px;
+  border: rgb(153, 87, 0);
+  background-color: burlywood;
+  text-align: center;
+  display: inline-block;
+  border-style: solid;
+  font-weight: bold;
+}
+
+.fighting-centered {
+  text-align: center;
+  /* top: 50%; */
+  left: 50%;
+  width: 50%;
+  transform: translate(-100%, 0%);
+}
+
+.full-width {
+  width: 100% !important;
+  transform: translate(-50%, 0%);
+}
+
+.fighting-block {
+  color: rgb(255, 255, 255) !important;
+  display: inline-block;
+  font-size: 32px;
+  position: relative;
+}
+
+.block {
+  padding: 10px;
+  margin: 10px;
+  border: #222;
+  text-align: center;
+  display: inline-block;
+  border-style: solid;
+  font-weight: bold;
+}
+
+.active {
+  background-color: rgb(82, 255, 126);
+}
+
+.inactive {
+  background-color: rgb(131, 131, 131);
+}
+
+.charged {
+  -webkit-animation: neon4 1.5s ease-in-out infinite alternate;
+  -moz-animation: neon4 1.5s ease-in-out infinite alternate;
+  animation: neon4 1.5s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes neon4 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #B6FF00, 0 0 70px #B6FF00, 0 0 80px #B6FF00, 0 0 100px #B6FF00, 0 0 150px #B6FF00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
+  }
+}
+
+@keyframes neon4 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #B6FF00, 0 0 70px #B6FF00, 0 0 80px #B6FF00, 0 0 100px #B6FF00, 0 0 150px #B6FF00;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #B6FF00, 0 0 35px #B6FF00, 0 0 40px #B6FF00, 0 0 50px #B6FF00, 0 0 75px #B6FF00;
+  }
+}
+
+@keyframes TPC-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/*REEEEEEEEEEESPONSIVE*/
+
+@media (max-width: 650px) {
+  #container {
+    width: 100%;
+  }
+  p {
+    font-size: 3.5em;
+  }
+}
