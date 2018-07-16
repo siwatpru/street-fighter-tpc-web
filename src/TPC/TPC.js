@@ -2,16 +2,16 @@ import React, { Component } from "react";
 import "./TPC.css";
 import socketIOClient from "socket.io-client";
 
-import player1 from "../accets/tpc_player_v1/tpc_sprite_player_A.gif";
-import player1Charge from "../accets/tpc_player_v1/tpc_sprite_player_A_charge.gif";
-import player1Attack from "../accets/tpc_player_v1/tpc_sprite_player_A_attack.gif";
-import player1Shield from "../accets/tpc_player_v1/tpc_sprite_player_A_shield.gif";
-import player2 from "../accets/tpc_player_v1/tpc_sprite_player_B.gif";
-import player2Charge from "../accets/tpc_player_v1/tpc_sprite_player_B_charge.gif";
-import player2Attack from "../accets/tpc_player_v1/tpc_sprite_player_B_attack.gif";
-import player2Shield from "../accets/tpc_player_v1/tpc_sprite_player_B_shield.gif";
+import player1 from "../assets/tpc_player_v1/tpc_sprite_player_A.gif";
+import player1Charge from "../assets/tpc_player_v1/tpc_sprite_player_A_charge.gif";
+import player1Attack from "../assets/tpc_player_v1/tpc_sprite_player_A_attack.gif";
+import player1Shield from "../assets/tpc_player_v1/tpc_sprite_player_A_shield.gif";
+import player2 from "../assets/tpc_player_v1/tpc_sprite_player_B.gif";
+import player2Charge from "../assets/tpc_player_v1/tpc_sprite_player_B_charge.gif";
+import player2Attack from "../assets/tpc_player_v1/tpc_sprite_player_B_attack.gif";
+import player2Shield from "../assets/tpc_player_v1/tpc_sprite_player_B_shield.gif";
 
-import shield from "../accets/tpc_player_v1/tpc_sprite_shield.png";
+import shield from "../assets/tpc_player_v1/tpc_sprite_shield.png";
 
 const ACTION = {
   TOB: 0,
